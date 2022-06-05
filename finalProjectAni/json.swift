@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Request: Decodable {
+struct Products: Decodable {
     let products: [Technics]!
     let total, skip, limit: Int
 }
@@ -29,7 +29,7 @@ struct Technics: Decodable {
 
 var caunt: Int = 0
 
-private enum jsonKeys: String, CodingKey {
+/*private enum jsonKeys: String, CodingKey {
     case id = "id"
     case title = "title"
     case description = "descriprion"
@@ -42,4 +42,4 @@ private enum jsonKeys: String, CodingKey {
     case thumbnail =  "tumbnail"
     case images = "images"
     
-}
+}*/

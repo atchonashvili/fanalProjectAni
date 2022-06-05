@@ -7,25 +7,48 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDelegate {
+class SecondViewController: UIViewController, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return productItems[section].products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    }
+    
+    
+    
    
-    @IBOutlet weak var technicsTableView: UITableView!
+ final let url = URL(string: "https://dummyjson.com/products")
+
+    
+    /*func downloadJson() {
+        guard let downloadUrl = url else {return}
+        URLSession.shared.dataTask(with: downloadUrl) {
+            data, URLResponse, error in
+            guard let data = data, error == nil. URLResponse != nil else {}
+            }
+            print ("downloaded")
+        }.resume()
+    }*/
+     @IBOutlet weak var tableViewCell: UITableView!
     
     
+    private var productItems:[ItemCategory] = []
     
     
-    
-    private let technicPicture = URL(string: "https://dummyjson.com/products")
+ /*   private let technicPicture = URL(string: "https://dummyjson.com/products")
     private var technics = [Technics]()
     private var productItems:[ItemCategory] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return productItems[section].products.count
-    }
+    }*/
     
    
-    func dataJson () {
-        URLSession.shared.dataTask(with: technicPicture!) {
+    func downloadJson () {
+        guard let downloadUrl = url else {return}
+        URLSession.shared.dataTask(with: downloadUrl) {
             data, URLResponse, error in
             if let error = error {
                 print(error.localizedDescription)
@@ -36,12 +59,12 @@ class SecondViewController: UIViewController, UITableViewDelegate {
             }
             do {
                 let decoder = JSONDecoder()
-                guard let decodedData = try? decoder.decode(Technics.self, from: data) else {
+                guard let decodedData = try? decoder.decode(Products.self, from: data) else {
                     return
                 }
-               // self.technics = decodedData.products
+             //   self.Technics = decodedData.products
                 DispatchQueue.main.async {
-                //    self.technicsTableView.reloadData()
+                self.tableViewCell.reloadData()
                 }
             }
         }.resume()
@@ -53,13 +76,19 @@ class SecondViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        technicsTableView.delegate = self
-        dataJson()
+        downloadJson()
         
 
     }
     
+   
+    
+    
+    
+}
+
+    
 
    
 
-}
+     

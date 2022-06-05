@@ -16,6 +16,7 @@
 		1881CDFA2846AFBC006F959F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881CDF92846AFBC006F959F /* SecondViewController.swift */; };
 		1881CE00284C9DDA006F959F /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881CDFF284C9DDA006F959F /* json.swift */; };
 		1881CE02284C9E18006F959F /* ItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881CE01284C9E18006F959F /* ItemCategory.swift */; };
+		18977588284D4C62004126F4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18977587284D4C62004126F4 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1881CDF92846AFBC006F959F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1881CDFF284C9DDA006F959F /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		1881CE01284C9E18006F959F /* ItemCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategory.swift; sourceTree = "<group>"; };
+		18977587284D4C62004126F4 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				1881CDE52846970F006F959F /* AppDelegate.swift */,
 				1881CDE72846970F006F959F /* SceneDelegate.swift */,
+				18977587284D4C62004126F4 /* TableViewCell.swift */,
 				1881CDE92846970F006F959F /* ViewController.swift */,
 				1881CDF92846AFBC006F959F /* SecondViewController.swift */,
 				1881CDFF284C9DDA006F959F /* json.swift */,
@@ -152,6 +155,7 @@
 				1881CE00284C9DDA006F959F /* json.swift in Sources */,
 				1881CDE62846970F006F959F /* AppDelegate.swift in Sources */,
 				1881CE02284C9E18006F959F /* ItemCategory.swift in Sources */,
+				18977588284D4C62004126F4 /* TableViewCell.swift in Sources */,
 				1881CDE82846970F006F959F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
